@@ -3,7 +3,7 @@ Docker file for a Counterstrike 1.6 server with some custom settings (see server
 
 ```bash
 git clone git@github.com:jorisvandesande/cs16-server.git
-cd cd16-server
+cd cs16-server
 docker build .
 ```
 
