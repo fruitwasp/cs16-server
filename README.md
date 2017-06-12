@@ -2,12 +2,10 @@ Docker file for a Counterstrike 1.6 server with some custom settings (see server
 
 
 ```bash
-git clone git@github.com:jorisvandesande/cs16-server.git
-cd cs16-server
-docker build .
+docker pull jorisvandesande/cs16-server
 ```
 
-Use the hash that will be emitted by the `docker build` command as `<image_name>` when starting the container:
+Then start the container with the following command to expose the server to your network:
 ```bash
-docker run -p 26900:26900/udp -p 27020:27020/udp -p 27015:27015/udp -p 27015:27015 -d <image_name>
+docker run -p 26900:26900/udp -p 27020:27020/udp -p 27015:27015/udp -p 27015:27015 -d jorisvandesande/cs16-server
 ```
